@@ -11,18 +11,32 @@ if (memNum % colNum === 0) {
 } else {
   rowNum = parseInt(memNum / colNum + 1);
 }
-
+//table>tr>td
+//총인원 5(memNum), 한줄에 앉을 인원 2
 document.write(`<table>`);
-for (var i = 0; i < rowNum; i++) {
+for (var i = 0; i < rowNum; i++) {//i=tr
   document.write(`<tr>`);
   for (var j = 1; j <= colNum; j++) {
     var seatNo = i * colNum + j;
-    if (seatNo <= memNum) {
-      document.write(`<td>좌석 ${seatNo}</td>`);
-    } else {
-      document.write(`<td></td>`);
-    }
+    if (seatNo > memNum) break;
+    document.write(`<td>좌석 ${seatNo}</td>`);
   }
   document.write(`</tr>`);
 }
 document.write(`</table>`);
+
+
+// document.write(`<table>`);
+// for (var i = 0; i < rowNum; i++) {//i=tr
+//   document.write(`<tr>`);
+//   for (var j = 1; j <= colNum; j++) {
+//     var seatNo = i * colNum + j;
+//     if (seatNo <= memNum) {
+//       document.write(`<td>좌석 ${seatNo}</td>`);
+//     } else {
+//       document.write(`<td></td>`);
+//     }
+//   }
+//   document.write(`</tr>`);
+// }
+// document.write(`</table>`);
