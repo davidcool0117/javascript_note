@@ -1,0 +1,38 @@
+:root {
+  --color1: white;
+  --padd10: 10px;
+  --color3: skyblue;
+  --color4: rgba(0,0,0,.4);
+}
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+header nav ul li {
+  margin: 0 calc(var(--padd10) * 2);
+  list-style: none;
+}
+header nav ul li a {
+  color: var(--color1);
+}
+#menu .active a {
+  color: var(--color3);
+  text-shadow: 2px 2px 5px black;
+}
+#fp-nav ul li a.active + .fp-tooltip {
+  color: pink;
+  background-color: purple;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#fp-nav ul li.on .active span{
+    background-color: red;
+}
