@@ -1,0 +1,83 @@
+/* 속성은 같고 값이 다를 때 하나의 코드블럭으로 정의해서 사용 */
+$red: #ff7b7b;
+$pink: #ffbdbd;
+$blue: #5949d3;
+$green: #8fffbc;
+$beige: #fff4c1;
+$black: #333;
+$gray: #ccc;
+$px10: 10px;
+$boxShadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+
+//mixin
+@mixin fontSizeBgColor($fontSize,$bgColor){
+    font-size: $fontSize;
+    background-color: $bgColor;
+}
+
+@mixin fontColorTxtDec($color,$txtDec){
+    color: $color;
+    text-decoration: $txtDec;
+}
+@mixin borderR($border,$borderR){
+    border: $border;
+    border-radius: $borderR;
+}
+@mixin boxShadow($wBoxS,$boxS){
+    -webkit-box-shadow: $wBoxS;
+    box-shadow: $boxS;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    margin: calc($px10 * 2);
+    background-color: $beige;
+}
+
+div {
+    color: $black;
+    padding: calc($px10 * 2);
+}
+
+a {
+    display: inline-block;
+    margin: $px10 0;
+}
+
+#box1 {
+    & {
+        @include fontSizeBgColor(calc($px10 * 4),$blue);
+        @include borderR(3px solid $red,calc($px10 * 2));
+        @include boxShadow($boxShadow,$boxShadow);
+    }
+
+    &-title {
+        color: $blue;
+        background: linear-gradient($blue, $green);
+    }
+    
+    &>a {
+        @include fontColorTxtDec(#a22,none);
+
+        &:hover {
+            background-color: $gray;
+        }
+    }
+
+    & #box2 {
+        @include fontSizeBgColor(calc($px10 * 2),#e9e9e9);
+        @include borderR(3px solid $red,calc($px10 * 2));
+        @include boxShadow($boxShadow,$boxShadow);
+
+        &>a {
+            @include fontColorTxtDec(#ee6633,none);
+
+            &:hover {
+                @include fontColorTxtDec(#a22,none);
+            }
+        }
+    }
+}

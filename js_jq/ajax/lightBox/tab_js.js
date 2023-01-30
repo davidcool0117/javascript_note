@@ -13,3 +13,4 @@ for(let i = 0; i<btn1.length; i++){
     panel1[i].style.display ='block';
     })
 }
+

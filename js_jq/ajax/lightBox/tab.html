@@ -52,23 +52,23 @@
           3. 1번과 2번에서 작성한 함수와 변수를 사용하여 코드를 재작성하기 (리팩토링, 고차함수)
         */
 
-      // const btn = $("ul>li"),
-      //   panel = $("h3");
-      // panel.hide();
+      const btn = $("ul>li"),
+        panel = $("h3");
+      panel.hide();
 
-      // btn.each(function (i, o) {
-      //   btn.eq(i).click(function () {
-      //     hidden(panel);
-      //     visible(panel.eq(i));
-      //   });
-      // });
+      btn.each(function (i, o) {
+        btn.eq(i).click(function () {
+          hidden(panel);
+          visible(panel.eq(i));
+        });
+      });
 
-      // function visible(obj) {
-      //   obj.show();
-      // }
-      // function hidden(obj) {
-      //   obj.hide();
-      // }
+      function visible(obj) {
+        obj.show();
+      }
+      function hidden(obj) {
+        obj.hide();
+      }
     </script>
     <script src="tab_js.js"></script>
   </body>
