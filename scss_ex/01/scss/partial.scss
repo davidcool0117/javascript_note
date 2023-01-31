@@ -1,0 +1,13 @@
+@import "base/base";
+@import "mixin";
+@import "partial/extend";
+
+#test{
+    @include fontSizeBgColor(calc($px10 * 10),$blue);
+    @extend %boxShape;
+}
+
+#test:hover{
+    @include hover($red,green wavy underline);
+}
+

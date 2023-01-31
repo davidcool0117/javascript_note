@@ -15,7 +15,7 @@ $boxShadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
     background-color: $bgColor;
 }
 
-@mixin fontColorTxtDec($color,$txtDec){
+@mixin hover($color,$txtDec:none){
     color: $color;
     text-decoration: $txtDec;
 }
@@ -60,7 +60,7 @@ a {
     }
     
     &>a {
-        @include fontColorTxtDec(#a22,none);
+        @include hover(#a22,none);
 
         &:hover {
             background-color: $gray;
@@ -73,10 +73,10 @@ a {
         @include boxShadow($boxShadow,$boxShadow);
 
         &>a {
-            @include fontColorTxtDec(#ee6633,none);
+            @include hover(#ee6633,none);
 
             &:hover {
-                @include fontColorTxtDec(#a22,none);
+                @include hover(#a22,none);
             }
         }
     }

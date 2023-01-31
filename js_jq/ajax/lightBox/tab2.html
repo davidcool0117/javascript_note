@@ -22,10 +22,13 @@
     <script>
       const btn = document.querySelectorAll("ul>li"),
         panel = document.querySelectorAll("h3");
-      panel.forEach((el, idx) => {
-        el.style.display = "none";
+
+        hidden(panel);
         visible(panel[0]);
-      });
+        //   panel.forEach((el, idx) => {
+        //     el.style.display = "none";
+        //     visible(panel[0]);
+        //   });
 
       btn.forEach((el, idx) => {
         el.addEventListener("click", function () {
@@ -35,7 +38,10 @@
       });
 
       function visible(obj) {
-        obj.style.display = "block";
+        obj.length==undefined? obj.style.display = "block":
+        obj.forEach((el, i) => {
+          el.style.display = "block";
+        });
       }
 
       function hidden(obj) {
