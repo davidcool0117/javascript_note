@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    <script>
+        function timer(time){
+            setTimeout(()=>{
+                document.write('1초 후 한다')
+                timer(timer(1000))
+            },time)
+        }
+        //timer(1000)
+
+
+        let myprom = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("성공")
+            },1000)
+        });
+        myprom.then((msg)=>{
+            document.write("1초 후 실행: ",msg);
+        }) 
+    </script>
+    -->
+    <script>
+        function timer(time){
+            return new Promise(function(resolve){
+                setTimeout(function(){
+                    resolve(time)
+                },time)
+            })
+        }
+        timer(1000).then((time)=>{
+            document.write("time"+time)
+            return timer(time+1000)
+        }).then((time)=>{
+            document.write("time"+time)
+            return timer(time+1000)
+        }).then((time)=>{
+            document.write("time"+time)
+            return timer(time+1000)
+        })
+    </script>
+</body>
+</html>
