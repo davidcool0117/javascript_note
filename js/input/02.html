@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://code.jquery.com/jquery-1.12.1.min.js'></script>
+</head>
+<body>
+    <h1>form 요소의 값을 얻어오기</h1>
+    <textarea id="myText">부재시 문앞에</textarea>
+    <p class="log"></p>
+    <script>
+        const ele=document.querySelector("#myText");
+        const val=ele.value;
+        const log=document.querySelector(".log");
+        ele.addEventListener('input',change)
+        function change(e){
+            const value=e.target.value;
+            const htmlStr=newVal.split("\n").join("<br/>")
+            log.innerHTML=htmlStr;
+        }
+
+    </script>
+</body>
+</html>

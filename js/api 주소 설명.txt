@@ -1,0 +1,20 @@
+
+https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?serviceKey=3NVhpSRT0O0siIH2KcrZSpgHjLx5mrRimZu1GnMr6XORd6Oy%2B7AtFpfp3OOYpjtq5WRWfhSrnKNmvhy9ZdnVjQ%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=20230209&base_time=0600&nx=55&ny=127
+
+//경로?serviceKey=일반인증키&항목명=샘플데이터&항목명=샘플데이터&항목명=샘플데이터&항목명=샘플데이터&항목명=샘플데이터&항목명=샘플데이터&항목명=샘플데이터
+
+// => serviceKey=일반인증키
+//    &
+//    항목명=샘플데이터
+//    &
+//    항목명=샘플데이터
+//    &
+//    항목명=샘플데이터
+//    &
+//    항목명=샘플데이터
+//    &
+//    항목명=샘플데이터
+//    &
+//    항목명=샘플데이터
+//    &
+//    항목명=샘플데이터
